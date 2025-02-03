@@ -19,4 +19,6 @@ function docs {
     Set-Location -Path $docs
 }
 
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/pure.omp.json" | Invoke-Expression
