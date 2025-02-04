@@ -19,8 +19,15 @@ function docs {
     Set-Location -Path $docs
 }
 
-Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+#Github
+function gs { git status }
+function ga { git add "$args" }
+function gc { param($m) git commit -m "$m" }
+function gp { git push }
+Remove-Alias -Force -Name gc
+Remove-Alias -Force -Name gp
 
 & ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\pure.omp.json" --print) -join "`n"))
 Import-Module Terminal-Icons
 Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
