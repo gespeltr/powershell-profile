@@ -11,3 +11,7 @@ winget install Microsoft.WindowsTerminal
 #Powershell
 Write-Host "Installing Powershell latestversion"
 winget install --id Microsoft.PowerShell --source winget
+
+#Oh My Posh
+Write-Host "Installing Oh My Posh"
+winget install JanDeDobbeleer.OhMyPosh -s winget
