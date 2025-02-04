@@ -22,3 +22,4 @@ function docs {
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 & ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\pure.omp.json" --print) -join "`n"))
+Import-Module Terminal-Icons
