@@ -1,5 +1,6 @@
 Windows Terminal Sheme:
 
+```
 {
     "background": "#282A36",
     "black": "#282A36",
@@ -23,3 +24,4 @@ Windows Terminal Sheme:
     "white": "#F1F1F0",
     "yellow": "#F3F99D"
 }
+```
