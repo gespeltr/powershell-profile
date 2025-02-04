@@ -24,8 +24,10 @@ function gs { git status }
 function ga { git add "$args" }
 function gc { param($m) git commit -m "$m" }
 function gp { git push }
+function gl { git pull }
 Remove-Alias -Force -Name gc
 Remove-Alias -Force -Name gp
+Remove-Alias -Force -Name gl
 
 & ([ScriptBlock]::Create((oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\pure.omp.json" --print) -join "`n"))
 Import-Module Terminal-Icons
