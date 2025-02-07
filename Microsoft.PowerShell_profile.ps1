@@ -14,9 +14,9 @@ function which($name) {
     Get-Command $name | Select-Object -ExpandProperty Definition
 }
 
-function docs { 
-    $docs = if(([Environment]::GetFolderPath("MyDocuments"))) {([Environment]::GetFolderPath("MyDocuments"))} else {$HOME + "\Documents"}
-    Set-Location -Path $docs
+function dev { 
+    $location = $HOME + "\Documents\dev"
+    Set-Location -Path $location
 }
 
 #Github
